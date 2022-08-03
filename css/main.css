@@ -847,6 +847,7 @@ a:visited {
 
 .sidebar .workouts .form .form__btn {
   display: none;
+  height: 100%;
 }
 
 .sidebar .copyright {
@@ -979,25 +980,36 @@ a:visited {
   }
   .sidebar .workouts .form {
     height: 14.25rem !important;
-    -ms-grid-columns: 1fr !important;
-        grid-template-columns: 1fr !important;
+    -ms-grid-columns: 1fr auto !important;
+        grid-template-columns: 1fr auto !important;
     position: relative;
     overflow: hidden;
-    padding-right: 4rem;
+    padding-right: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .sidebar .workouts .form.hidden {
     height: 0 !important;
     -webkit-transform: translateY(-40rem) !important;
             transform: translateY(-40rem) !important;
   }
+  .sidebar .workouts .form .form__row {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
   .sidebar .workouts .form .form__btn {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 4;
+    grid-row: 1 / 5;
     width: 2.5rem;
-    height: 100%;
-    background-color: #ffb545 !important;
+    height: 136%;
+    margin-top: -2rem;
+    background-color: #ffb545;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1007,7 +1019,6 @@ a:visited {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: transparent;
     border: none;
   }
   .sidebar .workouts .form .form__btn span {
