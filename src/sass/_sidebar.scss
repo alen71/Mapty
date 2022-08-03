@@ -678,7 +678,10 @@
         position: relative;
         overflow: hidden;
         padding-right: 0;
+        padding-bottom: 0;
+        padding-top: 0;
         justify-content: center;
+        row-gap: 0;
 
         &.hidden {
           height: 0 !important;
@@ -693,8 +696,7 @@
           grid-column: 2 / 3;
           grid-row: 1 / 5;
           width: 2.5rem;
-          height: 126%;
-          margin-top: -1.5rem;
+          height: 100%;
           background-color: $color-brand--1;
 
           display: flex;
