@@ -13,4 +13,5 @@ What I did in this project:
   * Click on popup, move map to corresponding popup
   * Map Zoom and View control
 
-
+Published by Netlify
+https://mapty-alen.netlify.app/
