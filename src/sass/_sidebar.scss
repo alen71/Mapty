@@ -783,14 +783,16 @@
           font-size: 1.4rem;
           background: transparent;
           border-radius: 4px;
-          padding: 0 1rem;
+          padding: 0.3rem 1rem;
+          // font-weight: 600;
+          border: none;
 
           &--running {
-            border: 2px solid $color-brand--2;
+            background-color: $color-brand--2;
           }
 
           &--cycling {
-            border: 2px solid $color-brand--1;
+            background-color: $color-brand--1;
           }
         }
 

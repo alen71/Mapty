@@ -86,8 +86,9 @@ const deleteWorkControl = function (el) {
     // Render workouts
     workoutsListView.renderWorkout(model.state.workouts, true);
 
-    // Add event handler to workouts
+    // Add event handlers to workouts
     editDeleteView.addDeleteHandlers(deleteWorkControl);
+    editDeleteView.addEditHandlers(deleteWorkControl);
   }, 1);
 };
 

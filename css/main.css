@@ -1115,13 +1115,14 @@ a:visited {
     font-size: 1.4rem;
     background: transparent;
     border-radius: 4px;
-    padding: 0 1rem;
+    padding: 0.3rem 1rem;
+    border: none;
   }
   .sidebar .workouts .edit-form .form__btn--running {
-    border: 2px solid #00c46a;
+    background-color: #00c46a;
   }
   .sidebar .workouts .edit-form .form__btn--cycling {
-    border: 2px solid #ffb545;
+    background-color: #ffb545;
   }
   .sidebar .workouts .edit-form .form__row .form__label {
     font-size: 1rem !important;
