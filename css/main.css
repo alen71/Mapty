@@ -847,7 +847,6 @@ a:visited {
 
 .sidebar .workouts .form .form__btn {
   display: none;
-  height: 100%;
 }
 
 .sidebar .copyright {
@@ -1007,8 +1006,8 @@ a:visited {
     -ms-grid-row-span: 4;
     grid-row: 1 / 5;
     width: 2.5rem;
-    height: 136%;
-    margin-top: -2rem;
+    height: 126%;
+    margin-top: -1.5rem;
     background-color: #ffb545;
     display: -webkit-box;
     display: -ms-flexbox;
