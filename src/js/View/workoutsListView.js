@@ -82,11 +82,11 @@ class workoutsListView extends View {
       const elevation = +inputElevation.value;
       if (
         validInputs(distance, duration, elevation) &&
-        positiveNums(distance, duration, elevation)
+        positiveNums(distance, duration)
       ) {
-        return;
-      } else {
         return { coords, distance, duration, elevation };
+      } else {
+        return;
       }
     }
   }
@@ -233,29 +233,44 @@ class workoutsListView extends View {
     form.insertAdjacentHTML('afterend', html);
   }
 
+  colorNotification() {
+    const emptyListText = document.querySelector('.empty-list-text');
+    emptyListText.classList.add('active');
+
+    setTimeout(() => {
+      emptyListText.classList.remove('active');
+    }, 1000);
+  }
+
   clearAllhandler(handler) {
-    document.getElementById('clear-all').addEventListener('click', function () {
-      if (document.querySelectorAll('.workout').length === 0) return;
-
-      confirmationPopup.classList.remove('invinsible');
-      overlay.classList.remove('invinsible');
-      htmlTag.classList.add('scroll-lock');
-
-      confirmationPopup.addEventListener('click', function (e) {
-        if (e.target.getAttribute('id') === 'no') {
-          confirmationPopup.classList.add('invinsible');
-          overlay.classList.add('invinsible');
-          htmlTag.classList.remove('scroll-lock');
+    document.getElementById('clear-all').addEventListener(
+      'click',
+      function () {
+        if (document.querySelectorAll('.workout').length === 0) {
+          this.colorNotification();
+          return;
         }
 
-        if (e.target.getAttribute('id') === 'yes') {
-          htmlTag.classList.remove('scroll-lock');
-          confirmationPopup.classList.add('invinsible');
-          overlay.classList.add('invinsible');
-          handler();
-        }
-      });
-    });
+        confirmationPopup.classList.remove('invinsible');
+        overlay.classList.remove('invinsible');
+        htmlTag.classList.add('scroll-lock');
+
+        confirmationPopup.addEventListener('click', function (e) {
+          if (e.target.getAttribute('id') === 'no') {
+            confirmationPopup.classList.add('invinsible');
+            overlay.classList.add('invinsible');
+            htmlTag.classList.remove('scroll-lock');
+          }
+
+          if (e.target.getAttribute('id') === 'yes') {
+            htmlTag.classList.remove('scroll-lock');
+            confirmationPopup.classList.add('invinsible');
+            overlay.classList.add('invinsible');
+            handler();
+          }
+        });
+      }.bind(this)
+    );
   }
 }
 

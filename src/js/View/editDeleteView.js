@@ -101,9 +101,9 @@ class EdtiDeleteView extends View {
         const elevation = editForm.querySelector(
           '.form__input--elevation'
         ).value;
-
+        console.log(elevation);
         if (
-          !validInputs(distance, duration) &&
+          !validInputs(distance, duration, elevation) &&
           !positiveNums(distance, duration)
         )
           return;

@@ -36,6 +36,10 @@ const controlNewWorkout = async function (data) {
     // Add Delete event handler to workouts
     editDeleteView.addDeleteHandler(deleteWorkControl);
 
+    // remove empty list text if exist
+    if (workoutsListView.checkEmptyListText())
+      workoutsListView.hideEmptyListText();
+
     // Add Edit event handler to workouts
     editDeleteView.addEditHandler(editWorkControl);
   } catch (err) {
@@ -47,6 +51,11 @@ const controlWorkoutsList = function (e, data) {
   workoutsListView.renderSpinner();
 
   model.getStoredWorkouts();
+
+  if (model.state.workouts.length === 0) {
+    workoutsListView.showEmptyListText();
+  }
+
   workoutsListView.renderWorkout(model.state.workouts);
 
   setTimeout(() => {
@@ -108,11 +117,12 @@ const sortWorkoutsControll = function (event) {
 const clearAllControll = function () {
   mapView.removeAllMarkers(model.state.workouts);
   workoutsListView.clearWorkList();
+  workoutsListView.showEmptyListText();
   model.claerAll();
 };
 
 const overviewControll = function () {
-  if (model.state.workouts.length === 0) return;
+  //   if (model.state.workouts.length === 0) return;
 
   mapView.setOverview(model.state.workouts);
 };

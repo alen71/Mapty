@@ -179,7 +179,7 @@
           font-weight: 600;
 
           position: absolute;
-          top: -20px;
+          top: -2.7rem;
           visibility: hidden;
           opacity: 0;
 
@@ -205,17 +205,11 @@
 
         & > i {
           color: #171d21;
-          font-size: 2rem;
+          font-size: 2.4rem;
           transition: all 0.3s;
           pointer-events: none;
         }
       }
-
-      // #overview {
-      // }
-
-      // #clear-all {
-      // }
     }
   }
 
@@ -230,6 +224,26 @@
     border-top: 0.5rem solid $color-dark--2;
 
     transition: all 0.4s;
+
+    .empty-list-text {
+      color: $color-dark--2;
+      font-size: 2.2rem;
+      transition: all 0.4s;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+
+      &.active {
+        color: $color-brand--1;
+        transform: scale(1.1);
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
 
     .workouts::-webkit-scrollbar {
       width: 0;
@@ -375,6 +389,7 @@
             color: #171d21;
             transition: all 0.3s;
             pointer-events: none;
+            font-size: 1.8rem;
           }
         }
       }

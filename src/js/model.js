@@ -149,6 +149,7 @@ const resetLocalStorade = function () {
 
 // EDIT WORKOUT
 export const editWorkout = function (formData) {
+  console.log(formData);
   const id = +formData.id;
   const distance = +formData.distance;
   const duration = +formData.duration;
@@ -170,7 +171,7 @@ export const editWorkout = function (formData) {
 
     targetedWorkout.distance = distance;
     targetedWorkout.duration = duration;
-    targetedWorkout.elevation = formData.elevation;
+    targetedWorkout.elevationGain = +formData.elevation;
     targetedWorkout.speed = speed;
   }
 

@@ -48,4 +48,20 @@ export default class View {
   removeSpinner() {
     document.querySelector('.spinner-box').classList.add('invinsible');
   }
+
+  hideEmptyListText() {
+    document.querySelector('.empty-list-text').classList.add('hidden');
+  }
+
+  showEmptyListText() {
+    document.querySelector('.empty-list-text').classList.remove('hidden');
+  }
+
+  checkEmptyListText() {
+    if (document.querySelector('.empty-list-text')) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }

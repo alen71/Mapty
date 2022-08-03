@@ -38,7 +38,13 @@ class mapView extends View {
   }
 
   setOverview(workouts) {
-    if (workouts.length === 0) return;
+    if (workouts.length === 0) {
+      workoutsListView.colorNotification();
+      return;
+    }
+    console.log(workouts);
+
+    console.log('radi');
 
     const latitudes = workouts.map(wrk => wrk.coords[0]);
     const longitudes = workouts.map(wrk => wrk.coords[1]);

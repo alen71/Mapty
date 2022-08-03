@@ -420,7 +420,7 @@ a:visited {
   border-radius: 5px;
   font-weight: 600;
   position: absolute;
-  top: -20px;
+  top: -2.7rem;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.3s;
@@ -450,7 +450,7 @@ a:visited {
 .sidebar .workouts-actions .right-side #overview > i,
 .sidebar .workouts-actions .right-side #clear-all > i {
   color: #171d21;
-  font-size: 2rem;
+  font-size: 2.4rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   pointer-events: none;
@@ -466,6 +466,33 @@ a:visited {
   border-top: 0.5rem solid #42484d;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+}
+
+.sidebar .workouts .empty-list-text {
+  color: #42484d;
+  font-size: 2.2rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+.sidebar .workouts .empty-list-text.active {
+  color: #ffb545;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.sidebar .workouts .empty-list-text.hidden {
+  display: none;
 }
 
 .sidebar .workouts .workouts::-webkit-scrollbar {
@@ -644,6 +671,7 @@ a:visited {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   pointer-events: none;
+  font-size: 1.8rem;
 }
 
 .sidebar .workouts .workout .workout__details {
