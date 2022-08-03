@@ -13,8 +13,9 @@ import { async } from 'regenerator-runtime';
 const constrolMap = function () {
   if (navigator.geolocation)
     navigator.geolocation.getCurrentPosition(
-      pos => mapView.loadMap(pos),
-      err => err
+      (pos) => mapView.loadMap(pos),
+      (err) =>
+        workoutsListView.renderError('Please enable location on your device')
     );
 };
 

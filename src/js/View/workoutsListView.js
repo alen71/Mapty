@@ -32,6 +32,7 @@ class workoutsListView extends View {
 
   _showForm(mapE) {
     form.classList.remove('hidden');
+    this.hideEmptyListText();
     if (
       inputType.value === 'running' &&
       inputCadence.parentElement.classList.contains('form__row--hidden')
@@ -48,7 +49,7 @@ class workoutsListView extends View {
   }
 
   formEventHandler(handler) {
-    form.addEventListener('submit', e => {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
       const formData = this._getDataFromForm();
       handler(formData);
@@ -117,7 +118,7 @@ class workoutsListView extends View {
   }
 
   renderWorkout(workouts, update = false) {
-    workouts.forEach(workout => {
+    workouts.forEach((workout) => {
       this.workouts.push(workout);
 
       this.markup(workout, update);

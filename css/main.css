@@ -110,9 +110,7 @@ a:visited {
 
 .message-box {
   position: fixed;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 80%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
