@@ -161,6 +161,11 @@ a:visited {
   body {
     padding: 0;
   }
+  .message-box {
+    width: 100%;
+    margin: auto 0;
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 31.25rem) {
@@ -169,10 +174,6 @@ a:visited {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-  }
-  .message-box {
-    margin: auto 0;
-    padding: 2rem;
   }
 }
 
@@ -995,6 +996,7 @@ a:visited {
     bottom: 0;
     right: 0;
     width: 2.5rem;
+    height: 100%;
     background-color: #ffb545 !important;
     display: -webkit-box;
     display: -ms-flexbox;
