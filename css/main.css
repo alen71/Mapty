@@ -1001,6 +1001,12 @@ a:visited {
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
   }
+  .sidebar .workouts .form .form__row:nth-child(1) {
+    margin-top: 1rem;
+  }
+  .sidebar .workouts .form .form__row:nth-child(4) {
+    margin-bottom: 1rem;
+  }
   .sidebar .workouts .form .form__btn {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
